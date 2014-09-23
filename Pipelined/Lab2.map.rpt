@@ -1,0 +1,1353 @@
+Analysis & Synthesis report for Lab2
+Sun Nov 17 03:48:37 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: single_port_ram_with_init:b2v_inst1
+ 13. Port Connectivity Checks: "mux_weird:b2v_inst22"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 17 03:48:37 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Lab2                                            ;
+; Top-level Entity Name              ; pc_schematic                                    ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 5,562                                           ;
+;     Total combinational functions  ; 3,836                                           ;
+;     Dedicated logic registers      ; 2,242                                           ;
+; Total registers                    ; 2242                                            ;
+; Total pins                         ; 186                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; pc_schematic       ; Lab2               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; pc_schematic.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/pc_schematic.v     ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/alu.sv             ;         ;
+; program_counter.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/program_counter.sv ;         ;
+; register_file.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/register_file.sv   ;         ;
+; next_pc_logic.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/next_pc_logic.sv   ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/control.sv         ;         ;
+; datamem.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/datamem.sv         ;         ;
+; muxq.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/muxq.sv            ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux4.sv            ;         ;
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/decoder.sv         ;         ;
+; mux_weird.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux_weird.sv       ;         ;
+; prog3_ROM.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog3_ROM.sv       ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 5,562 ;
+;                                             ;       ;
+; Total combinational functions               ; 3836  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2234  ;
+;     -- 3 input functions                    ; 1054  ;
+;     -- <=2 input functions                  ; 548   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 3745  ;
+;     -- arithmetic mode                      ; 91    ;
+;                                             ;       ;
+; Total registers                             ; 2242  ;
+;     -- Dedicated logic registers            ; 2242  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 186   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 2242  ;
+; Total fan-out                               ; 19563 ;
+; Average fan-out                             ; 3.12  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+; |pc_schematic                            ; 3836 (0)          ; 2242 (0)     ; 0           ; 0            ; 0       ; 0         ; 186  ; 0            ; |pc_schematic                                     ; work         ;
+;    |alu:b2v_inst9|                       ; 1220 (1220)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|alu:b2v_inst9                       ; work         ;
+;    |control:b2v_inst7|                   ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|control:b2v_inst7                   ; work         ;
+;    |decoder:b2v_inst5|                   ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|decoder:b2v_inst5                   ; work         ;
+;    |mux4:b2v_inst10|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|mux4:b2v_inst10                     ; work         ;
+;    |mux_weird:b2v_inst22|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|mux_weird:b2v_inst22                ; work         ;
+;    |muxq:b2v_inst23|                     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|muxq:b2v_inst23                     ; work         ;
+;    |muxq:b2v_inst8|                      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|muxq:b2v_inst8                      ; work         ;
+;    |next_pc_logic:b2v_inst4|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|next_pc_logic:b2v_inst4             ; work         ;
+;    |prog3_ROM:b2v_inst2|                 ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|prog3_ROM:b2v_inst2                 ; work         ;
+;    |program_counter:b2v_inst|            ; 41 (41)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|program_counter:b2v_inst            ; work         ;
+;    |register_file:b2v_inst13|            ; 298 (298)         ; 120 (120)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|register_file:b2v_inst13            ; work         ;
+;    |single_port_ram_with_init:b2v_inst1| ; 2107 (2107)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pc_schematic|single_port_ram_with_init:b2v_inst1 ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++------------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal               ; Free of Timing Hazards ;
++------------------------------------------------------+-----------------------------------+------------------------+
+; alu:b2v_inst9|NZCV[2]                                ; alu:b2v_inst9|NZCV[2]             ; yes                    ;
+; alu:b2v_inst9|NZCV[0]                                ; alu:b2v_inst9|NZCV[1]             ; yes                    ;
+; alu:b2v_inst9|NZCV[1]                                ; alu:b2v_inst9|NZCV[1]             ; yes                    ;
+; alu:b2v_inst9|NZCV[3]                                ; alu:b2v_inst9|NZCV[3]             ; yes                    ;
+; register_file:b2v_inst13|data1[0]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; control:b2v_inst7|mem_alu_src                        ; control:b2v_inst7|Mux1            ; yes                    ;
+; register_file:b2v_inst13|data1[4]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[5]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[1]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[3]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[2]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[7]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data1[6]                    ; register_file:b2v_inst13|data1[7] ; yes                    ;
+; register_file:b2v_inst13|data2[0]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[0]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[1]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[1]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[2]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[2]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[3]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[3]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[4]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[4]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[5]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[5]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[6]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[6]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; register_file:b2v_inst13|data2[7]                    ; register_file:b2v_inst13|data2[7] ; yes                    ;
+; decoder:b2v_inst5|branch_imm[7]                      ; decoder:b2v_inst5|branch_imm[7]   ; yes                    ;
+; alu:b2v_inst9|result[0]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[1]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[2]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[3]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[4]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[5]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[6]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; alu:b2v_inst9|result[7]                              ; alu:b2v_inst9|result[7]           ; yes                    ;
+; decoder:b2v_inst5|reg_full[0]                        ; control:b2v_inst7|Mux3            ; yes                    ;
+; decoder:b2v_inst5|reg_full[1]                        ; control:b2v_inst7|Mux3            ; yes                    ;
+; decoder:b2v_inst5|reg_full[2]                        ; control:b2v_inst7|Mux3            ; yes                    ;
+; decoder:b2v_inst5|reg_full[3]                        ; control:b2v_inst7|Mux3            ; yes                    ;
+; decoder:b2v_inst5|immediate[0]                       ; decoder:b2v_inst5|Mux5            ; yes                    ;
+; decoder:b2v_inst5|immediate[1]                       ; decoder:b2v_inst5|Mux5            ; yes                    ;
+; decoder:b2v_inst5|immediate[2]                       ; decoder:b2v_inst5|Mux5            ; yes                    ;
+; decoder:b2v_inst5|immediate[3]                       ; decoder:b2v_inst5|Mux5            ; yes                    ;
+; decoder:b2v_inst5|immediate[4]                       ; decoder:b2v_inst5|Mux5            ; yes                    ;
+; decoder:b2v_inst5|immediate[5]                       ; decoder:b2v_inst5|Mux9            ; yes                    ;
+; decoder:b2v_inst5|immediate[6]                       ; decoder:b2v_inst5|Mux9            ; yes                    ;
+; decoder:b2v_inst5|immediate[7]                       ; decoder:b2v_inst5|Mux9            ; yes                    ;
+; decoder:b2v_inst5|reg1_banked[0]                     ; decoder:b2v_inst5|Mux22           ; yes                    ;
+; decoder:b2v_inst5|reg1_banked[1]                     ; decoder:b2v_inst5|Mux22           ; yes                    ;
+; decoder:b2v_inst5|reg1_banked[2]                     ; decoder:b2v_inst5|Mux22           ; yes                    ;
+; decoder:b2v_inst5|reg2_banked[0]                     ; decoder:b2v_inst5|WideOr2         ; yes                    ;
+; decoder:b2v_inst5|reg2_banked[1]                     ; decoder:b2v_inst5|WideOr2         ; yes                    ;
+; decoder:b2v_inst5|reg2_banked[2]                     ; decoder:b2v_inst5|WideOr2         ; yes                    ;
+; decoder:b2v_inst5|reg_wr_banked[0]                   ; decoder:b2v_inst5|Mux18           ; yes                    ;
+; decoder:b2v_inst5|reg_wr_banked[1]                   ; decoder:b2v_inst5|Mux18           ; yes                    ;
+; decoder:b2v_inst5|reg_wr_banked[2]                   ; decoder:b2v_inst5|Mux18           ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[0]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[1]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[2]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[3]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[4]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[5]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[6]                    ; control:b2v_inst7|halt            ; yes                    ;
+; next_pc_logic:b2v_inst4|pcnext[7]                    ; control:b2v_inst7|halt            ; yes                    ;
+; control:b2v_inst7|reg_input_src[1]                   ; control:b2v_inst7|Mux9            ; yes                    ;
+; control:b2v_inst7|reg_input_src[0]                   ; control:b2v_inst7|Mux9            ; yes                    ;
+; control:b2v_inst7|direct_flag                        ; control:b2v_inst7|Decoder2        ; yes                    ;
+; alu:b2v_inst9|temp[0]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[1]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[2]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[3]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[4]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[5]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[6]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[7]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; alu:b2v_inst9|temp[8]                                ; alu:b2v_inst9|temp[0]             ; yes                    ;
+; register_file:b2v_inst13|data4[3]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[4]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[5]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[6]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[7]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[6]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[2]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[1]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data4[0]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[5]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[4]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[7]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[3]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[2]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[1]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; register_file:b2v_inst13|data3[0]                    ; register_file:b2v_inst13|data3[7] ; yes                    ;
+; alu:b2v_inst9|tally_count[0]                         ; alu:b2v_inst9|tally_count[7]      ; yes                    ;
+; alu:b2v_inst9|tally_regs[44][0]                      ; alu:b2v_inst9|Decoder1            ; yes                    ;
+; alu:b2v_inst9|tally_regs[52][0]                      ; alu:b2v_inst9|Decoder1            ; yes                    ;
+; alu:b2v_inst9|tally_regs[36][0]                      ; alu:b2v_inst9|Decoder1            ; yes                    ;
+; alu:b2v_inst9|tally_regs[60][0]                      ; alu:b2v_inst9|Decoder1            ; yes                    ;
+; alu:b2v_inst9|tally_regs[49][0]                      ; alu:b2v_inst9|Decoder1            ; yes                    ;
+; Number of user-specified and inferred latches = 622  ;                                   ;                        ;
++------------------------------------------------------+-----------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; register_file:b2v_inst13|bank_a_reg0[0..7] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8      ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2242  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2168  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen3[1]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen2[1]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen1[3]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen0[3]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_setting[2] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen4[3]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen3[3]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen2[7]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen0[0]    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_imm[1]     ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen6[6]    ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen5[5]    ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_b_gen4[6]    ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen5[0]    ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |pc_schematic|register_file:b2v_inst13|bank_a_gen1[1]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |pc_schematic|mux_weird:b2v_inst22|Mux1                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |pc_schematic|mux4:b2v_inst10|Mux6                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight0                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|temp[8]                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftLeft0                   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight0                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |pc_schematic|decoder:b2v_inst5|Mux13                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |pc_schematic|decoder:b2v_inst5|Mux19                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |pc_schematic|decoder:b2v_inst5|Mux16                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight1                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftLeft0                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight0                  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight1                  ;
+; 17:1               ; 7 bits    ; 77 LEs        ; 70 LEs               ; 7 LEs                  ; No         ; |pc_schematic|register_file:b2v_inst13|data2[7]          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftLeft0                   ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|Mux0                         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |pc_schematic|alu:b2v_inst9|ShiftRight1                  ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; No         ; |pc_schematic|alu:b2v_inst9|Add2                         ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |pc_schematic|alu:b2v_inst9|Add2                         ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 24 LEs               ; 30 LEs                 ; No         ; |pc_schematic|alu:b2v_inst9|result[6]                    ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 70 LEs               ; 98 LEs                 ; No         ; |pc_schematic|register_file:b2v_inst13|data1[4]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: single_port_ram_with_init:b2v_inst1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; ADDR_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_weird:b2v_inst22"                                                                                                                         ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; input3 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:13     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 17 03:48:21 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file pc_schematic.v
+    Info (12023): Found entity 1: pc_schematic
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file program_counter.sv
+    Info (12023): Found entity 1: program_counter
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.sv
+    Info (12023): Found entity 1: register_file
+Info (12021): Found 1 design units, including 1 entities, in source file next_pc_logic.sv
+    Info (12023): Found entity 1: next_pc_logic
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_rom.sv
+    Info (12023): Found entity 1: instruction_rom
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_alu.sv
+    Info (12023): Found entity 1: testbench_alu
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_reg.sv
+    Info (12023): Found entity 1: testbench_reg
+Info (12021): Found 1 design units, including 1 entities, in source file control.sv
+    Info (12023): Found entity 1: control
+Info (12021): Found 1 design units, including 1 entities, in source file datamem.sv
+    Info (12023): Found entity 1: single_port_ram_with_init
+Info (12021): Found 1 design units, including 1 entities, in source file muxq.sv
+    Info (12023): Found entity 1: muxq
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
+    Info (12023): Found entity 1: decoder
+Info (12021): Found 1 design units, including 1 entities, in source file mux_weird.sv
+    Info (12023): Found entity 1: mux_weird
+Info (12021): Found 1 design units, including 1 entities, in source file prog3_rom.sv
+    Info (12023): Found entity 1: prog3_ROM
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_prog.sv
+    Info (12023): Found entity 1: testbench_prog
+Info (12021): Found 1 design units, including 1 entities, in source file prog2_rom.sv
+    Info (12023): Found entity 1: prog2_ROM
+Info (12127): Elaborating entity "pc_schematic" for the top level hierarchy
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:b2v_inst"
+Info (12128): Elaborating entity "single_port_ram_with_init" for hierarchy "single_port_ram_with_init:b2v_inst1"
+Info (12128): Elaborating entity "mux4" for hierarchy "mux4:b2v_inst10"
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:b2v_inst13"
+Warning (10270): Verilog HDL Case Statement warning at register_file.sv(74): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at register_file.sv(25): inferring latch(es) for variable "data1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at register_file.sv(25): inferring latch(es) for variable "data2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at register_file.sv(25): inferring latch(es) for variable "data3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at register_file.sv(25): inferring latch(es) for variable "data4", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "data4[0]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[1]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[2]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[3]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[4]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[5]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[6]" at register_file.sv(118)
+Info (10041): Inferred latch for "data4[7]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[0]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[1]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[2]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[3]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[4]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[5]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[6]" at register_file.sv(118)
+Info (10041): Inferred latch for "data3[7]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[0]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[1]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[2]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[3]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[4]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[5]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[6]" at register_file.sv(118)
+Info (10041): Inferred latch for "data2[7]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[0]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[1]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[2]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[3]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[4]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[5]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[6]" at register_file.sv(118)
+Info (10041): Inferred latch for "data1[7]" at register_file.sv(118)
+Info (12128): Elaborating entity "prog3_ROM" for hierarchy "prog3_ROM:b2v_inst2"
+Warning (10030): Net "instruction.data_a" at prog3_ROM.sv(10) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instruction.waddr_a" at prog3_ROM.sv(10) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instruction.we_a" at prog3_ROM.sv(10) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "mux_weird" for hierarchy "mux_weird:b2v_inst22"
+Info (12128): Elaborating entity "muxq" for hierarchy "muxq:b2v_inst23"
+Info (12128): Elaborating entity "next_pc_logic" for hierarchy "next_pc_logic:b2v_inst4"
+Warning (10230): Verilog HDL assignment warning at next_pc_logic.sv(19): truncated value with size 32 to match size of target (8)
+Warning (10240): Verilog HDL Always Construct warning at next_pc_logic.sv(14): inferring latch(es) for variable "pcnext", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "pcnext[0]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[1]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[2]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[3]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[4]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[5]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[6]" at next_pc_logic.sv(14)
+Info (10041): Inferred latch for "pcnext[7]" at next_pc_logic.sv(14)
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:b2v_inst5"
+Warning (10270): Verilog HDL Case Statement warning at decoder.sv(72): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "reg1_banked", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "reg_wr_banked", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "branch_imm", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "reg_full", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "immediate", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at decoder.sv(16): inferring latch(es) for variable "reg2_banked", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "reg2_banked[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg2_banked[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg2_banked[2]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[2]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[3]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[4]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[5]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[6]" at decoder.sv(16)
+Info (10041): Inferred latch for "immediate[7]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_full[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_full[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_full[2]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_full[3]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[2]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[3]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[4]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[5]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[6]" at decoder.sv(16)
+Info (10041): Inferred latch for "branch_imm[7]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_wr_banked[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_wr_banked[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg_wr_banked[2]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg1_banked[0]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg1_banked[1]" at decoder.sv(16)
+Info (10041): Inferred latch for "reg1_banked[2]" at decoder.sv(16)
+Info (12128): Elaborating entity "control" for hierarchy "control:b2v_inst7"
+Warning (10240): Verilog HDL Always Construct warning at control.sv(25): inferring latch(es) for variable "reg_input_src", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.sv(25): inferring latch(es) for variable "mem_alu_src", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.sv(25): inferring latch(es) for variable "direct_flag", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "direct_flag" at control.sv(25)
+Info (10041): Inferred latch for "mem_alu_src" at control.sv(25)
+Info (10041): Inferred latch for "reg_input_src[0]" at control.sv(25)
+Info (10041): Inferred latch for "reg_input_src[1]" at control.sv(25)
+Info (12128): Elaborating entity "alu" for hierarchy "alu:b2v_inst9"
+Warning (10240): Verilog HDL Always Construct warning at alu.sv(28): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.sv(28): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.sv(28): inferring latch(es) for variable "NZCV", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.sv(28): inferring latch(es) for variable "tally_count", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.sv(28): inferring latch(es) for variable "max", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "max[0]" at alu.sv(28)
+Info (10041): Inferred latch for "max[1]" at alu.sv(28)
+Info (10041): Inferred latch for "max[2]" at alu.sv(28)
+Info (10041): Inferred latch for "max[3]" at alu.sv(28)
+Info (10041): Inferred latch for "max[4]" at alu.sv(28)
+Info (10041): Inferred latch for "max[5]" at alu.sv(28)
+Info (10041): Inferred latch for "max[6]" at alu.sv(28)
+Info (10041): Inferred latch for "max[7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_count[7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[63][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[62][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[61][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[60][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[59][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[58][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[57][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[56][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[55][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[54][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[53][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[52][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[51][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[50][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[49][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[48][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[47][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[46][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[45][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[44][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[43][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[42][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[41][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[40][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[39][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[38][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[37][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[36][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[35][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[34][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[33][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[32][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[31][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[30][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[29][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[28][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[27][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[26][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[25][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[24][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[23][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[22][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[21][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[20][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[19][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[18][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[17][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[16][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[15][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[14][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[13][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[12][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[11][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[10][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[9][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[8][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[7][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[6][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[5][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[4][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[3][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[2][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[1][7]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][0]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][1]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][2]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][3]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][4]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][5]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][6]" at alu.sv(28)
+Info (10041): Inferred latch for "tally_regs[0][7]" at alu.sv(28)
+Info (10041): Inferred latch for "NZCV[0]" at alu.sv(28)
+Info (10041): Inferred latch for "NZCV[1]" at alu.sv(28)
+Info (10041): Inferred latch for "NZCV[2]" at alu.sv(28)
+Info (10041): Inferred latch for "NZCV[3]" at alu.sv(28)
+Info (10041): Inferred latch for "result[0]" at alu.sv(28)
+Info (10041): Inferred latch for "result[1]" at alu.sv(28)
+Info (10041): Inferred latch for "result[2]" at alu.sv(28)
+Info (10041): Inferred latch for "result[3]" at alu.sv(28)
+Info (10041): Inferred latch for "result[4]" at alu.sv(28)
+Info (10041): Inferred latch for "result[5]" at alu.sv(28)
+Info (10041): Inferred latch for "result[6]" at alu.sv(28)
+Info (10041): Inferred latch for "result[7]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[0]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[1]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[2]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[3]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[4]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[5]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[6]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[7]" at alu.sv(28)
+Info (10041): Inferred latch for "temp[8]" at alu.sv(28)
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "prog3_ROM:b2v_inst2|instruction" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "single_port_ram_with_init:b2v_inst1|ram" is uninferred due to asynchronous read logic
+Warning (113028): 1 out of 20 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113026): Memory Initialization File Address 0 is not initialized
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (20) in the Memory Initialization File "C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/db/Lab2.ram0_prog3_ROM_56e43633.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/db/Lab2.ram0_single_port_ram_with_init_8f510eeb.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "alu:b2v_inst9|NZCV[1]" merged with LATCH primitive "alu:b2v_inst9|NZCV[0]"
+    Info (13026): Duplicate LATCH primitive "decoder:b2v_inst5|branch_imm[4]" merged with LATCH primitive "decoder:b2v_inst5|branch_imm[3]"
+    Info (13026): Duplicate LATCH primitive "decoder:b2v_inst5|branch_imm[5]" merged with LATCH primitive "decoder:b2v_inst5|branch_imm[3]"
+    Info (13026): Duplicate LATCH primitive "decoder:b2v_inst5|branch_imm[6]" merged with LATCH primitive "decoder:b2v_inst5|branch_imm[3]"
+    Info (13026): Duplicate LATCH primitive "decoder:b2v_inst5|branch_imm[7]" merged with LATCH primitive "decoder:b2v_inst5|branch_imm[3]"
+Warning (13012): Latch alu:b2v_inst9|NZCV[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch control:b2v_inst7|mem_alu_src has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch register_file:b2v_inst13|data1[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data1[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|branch_imm[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[0]
+Warning (13012): Latch register_file:b2v_inst13|data2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|branch_imm[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|branch_imm[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|branch_imm[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch register_file:b2v_inst13|data2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch register_file:b2v_inst13|data2[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|result[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[2]
+Warning (13012): Latch alu:b2v_inst9|result[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[3]
+Warning (13012): Latch alu:b2v_inst9|result[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_file:b2v_inst13|bank_b_setting[2]
+Warning (13012): Latch decoder:b2v_inst5|reg_full[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg_full[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg_full[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch decoder:b2v_inst5|reg_full[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[0]
+Warning (13012): Latch decoder:b2v_inst5|immediate[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch decoder:b2v_inst5|immediate[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|immediate[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg1_banked[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch decoder:b2v_inst5|reg1_banked[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg1_banked[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch decoder:b2v_inst5|reg2_banked[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[0]
+Warning (13012): Latch decoder:b2v_inst5|reg2_banked[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg2_banked[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg_wr_banked[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch decoder:b2v_inst5|reg_wr_banked[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch decoder:b2v_inst5|reg_wr_banked[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch next_pc_logic:b2v_inst4|pcnext[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch control:b2v_inst7|reg_input_src[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch control:b2v_inst7|reg_input_src[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch control:b2v_inst7|direct_flag has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|temp[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|tally_count[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|tally_count[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|tally_count[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|tally_count[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|tally_count[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[0]
+Warning (13012): Latch alu:b2v_inst9|tally_count[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch alu:b2v_inst9|tally_count[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[1]
+Warning (13012): Latch alu:b2v_inst9|tally_count[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[1]
+Warning (13012): Latch alu:b2v_inst9|max[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|max[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|max[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|max[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[4]
+Warning (13012): Latch alu:b2v_inst9|max[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[3]
+Warning (13012): Latch alu:b2v_inst9|max[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[2]
+Warning (13012): Latch alu:b2v_inst9|max[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[1]
+Warning (13012): Latch alu:b2v_inst9|max[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:b2v_inst|pc[0]
+Info (144001): Generated suppressed messages file C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/Lab2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5797 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 185 output pins
+    Info (21061): Implemented 5611 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 205 warnings
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Sun Nov 17 03:48:37 2013
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/Lab2.map.smsg.
+
+

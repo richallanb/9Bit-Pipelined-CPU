@@ -1,0 +1,58 @@
+module decoder (
+	input wire clk,
+	input wire instruction[8:0],
+	
+	output reg [2:0] reg1_banked,
+	output reg [2:0] reg2_banked,
+	output reg [3:0] reg_full,
+	output reg [7:0] imemdiate,
+	output reg [3:0] branch_imm
+	);
+
+always @ (posedge clk)
+begin
+	case (instruction[8:6])
+	3'b000:	// ARO
+		begin
+			reg1_banked <= instruction[5:3];
+			reg2_banked <= instruction[2:0];
+		end
+	3'b001:	// MOV
+		begin
+			reg1_banked <= instruction[5:3];
+			reg2_banked <= instruction[2:0];
+		end
+	3'b010:	// Ld / St
+		begin
+			reg1_banked <= instruction[5:3];
+			reg2_banked <= instruction[2:0];
+		end
+	3'b011:	// SSB
+		begin
+			immediate[7:5] <= 0;
+			immediate[4:0] <= instruction[4:0];
+			reg_full <= 4'b1000; // SSB reg
+		end
+	3'b100:	// Lo / Hi
+		begin
+			if (instruction[5])	// Lo
+				immediate[4:0] <= instruction[4:0];
+				reg_full <= 4'b0001; // Imm reg
+			else						// Hi
+				immediate[7:5] <= instruction[2:0]
+				reg_full <= 4'b0001; // Imm reg
+		end
+	3'b101:	// Branch
+		begin
+		if (instruction[5]) // offset
+			begin
+				branch_imm <= instruction[3:0];
+			end
+		else // direct
+			begin
+				reg_full <= instruction[3:0];
+			end
+		end
+	
+end
+endmodule

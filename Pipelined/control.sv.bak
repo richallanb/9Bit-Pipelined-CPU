@@ -1,0 +1,79 @@
+module control(
+input reg [8:0]instruction,
+
+input reg fulladdrm,
+
+output reg [1:0] aro,
+output reg special_op,
+output reg special_func[2:0],
+
+output reg branch, );
+
+always @(*)
+begin
+	case(instruction[8:6])
+		3'b000: //aro
+		begin
+		  
+		end
+		3'b001: //mov
+		begin
+		end
+		3'b010: //ldst
+		begin
+
+		end
+		3'b011: //ssb
+		begin
+		end
+		3'b100: //hi-lo
+		begin
+		end
+		3'b110: //special
+		begin
+		  case(instruction[5:3])
+		    3'b000:  //MFL
+			 begin
+			 end
+			 3'b001: //SPC
+			 begin
+			 end
+			 3'b010:  //MFH
+			 begin
+			 end
+			 3'b011: //ISC
+			 begin
+			 end
+			 3'b100: //INC
+			 begin
+			 end
+			 3'b101: //SM
+			 begin
+			 end
+			 3'b110: //tally
+			 begin
+			 end
+			 3'b111:
+			 begin
+			   case(instruction[2:0])
+				  3'b000: //halt
+				  begin
+				  end
+			 end
+			endcase
+		end
+		3'b101: //branching -
+		begin
+		end
+		3'b111: //tba
+		begin
+		end
+	endcase
+end
+
+endmodule
+	
+	
+
+
+end

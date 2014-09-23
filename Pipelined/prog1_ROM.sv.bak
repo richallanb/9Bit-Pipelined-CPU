@@ -1,0 +1,49 @@
+module prog2_ROM(
+input wire clk,
+input [7:0] pc,
+
+
+output reg [8:0] instr_out
+);
+
+
+reg [8:0] instruction [1:28];
+
+
+initial begin
+instruction[1] = 9'b100100001;//set $i to 1 with lo 
+instruction[2] = 9'b100000000; //hi 
+instruction[3] = 9'b011000000; //ssb ld,add, reg[A],reg[A]
+instruction[4] = 9'b010001110;//ld $i (mem[1]) to reg $t4
+instruction[5] = 9'b100100010;//set $i to 2 with lo
+instruction[6] = 9'b010001111; //ld $i (mem[2]) to reg $t5
+instruction[7] = 9'b011010001; //ssb st, add, reg A->B
+instruction[8] = 9'b010000101; //st $0 $s4
+instruction[9] = 9'b010000110; //st $0, $s5
+instruction[10] = 9'b010000111;//st $0, $s6
+instruction[11] = 9'b011001100;//ssb load,slt,A
+instruction[12] = 9'b001110011;//move $t4 $t1
+instruction[13] = 9'b000011000;//slt $t1 $0
+instruction[14] = 9'b101000100;//beq 4
+instruction[15] = 9'b001110101;//mov $t4 $t3 
+instruction[16] = 9'b001111110;//mov $t5 $t4
+instruction[17] = 9'b001101111;//mov $t3 $t5 
+instruction[18] = 9'b110000000;//mfl
+instruction[19] = 9'b110010000;//mfh 
+instruction[20] = 9'b110011000;//isc 
+instruction[21] =   9'b100111000; //$i = -4
+instruction[22] = 9'b101010001;//obne -4
+instruction[23]  = 9'b100100011; //setting memory[3] to $i 
+instruction[24] =  9'b011011101; //ssb store,slt,BA
+instruction[25] = 9'b010101001;//st $s4 $HI 
+instruction[26] = 9'b100100100; //setting memory[4] to $i
+instruction[27] = 9'b010110001;  //st $s5 mem[4]
+instruction[28] = 9'b110111000; //halt
+end
+
+
+always @ (*)
+begin
+	instr_out = instruction[pc[7:0]];
+end
+endmodule

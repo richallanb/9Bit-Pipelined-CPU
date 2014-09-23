@@ -1,0 +1,228 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// PROGRAM		"Quartus II 32-bit"
+// VERSION		"Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version"
+// CREATED		"Thu Nov 14 23:46:29 2013"
+
+module pc_schematic(
+	clk,
+	taken,
+	halt,
+	alu_NZCV,
+	alu_reg1,
+	alu_reg2,
+	alu_result,
+	instr_out,
+	pc
+);
+
+
+input wire	clk;
+output wire	taken;
+output wire	halt;
+output wire	[3:0] alu_NZCV;
+output wire	[7:0] alu_reg1;
+output wire	[7:0] alu_reg2;
+output wire	[7:0] alu_result;
+output wire	[8:0] instr_out;
+output wire	[7:0] pc;
+
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_55;
+wire	[7:0] SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_3;
+wire	SYNTHESIZED_WIRE_4;
+wire	[7:0] SYNTHESIZED_WIRE_56;
+wire	[7:0] SYNTHESIZED_WIRE_57;
+wire	[7:0] SYNTHESIZED_WIRE_58;
+wire	[7:0] SYNTHESIZED_WIRE_59;
+wire	[7:0] SYNTHESIZED_WIRE_10;
+wire	[1:0] SYNTHESIZED_WIRE_11;
+wire	SYNTHESIZED_WIRE_60;
+wire	SYNTHESIZED_WIRE_13;
+wire	[1:0] SYNTHESIZED_WIRE_61;
+wire	[7:0] SYNTHESIZED_WIRE_15;
+wire	[7:0] SYNTHESIZED_WIRE_16;
+wire	[7:0] SYNTHESIZED_WIRE_17;
+wire	[7:0] SYNTHESIZED_WIRE_18;
+wire	[2:0] SYNTHESIZED_WIRE_62;
+wire	SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_21;
+wire	SYNTHESIZED_WIRE_23;
+wire	[7:0] SYNTHESIZED_WIRE_24;
+wire	[3:0] SYNTHESIZED_WIRE_63;
+wire	[2:0] SYNTHESIZED_WIRE_26;
+wire	[2:0] SYNTHESIZED_WIRE_64;
+wire	[7:0] SYNTHESIZED_WIRE_65;
+wire	SYNTHESIZED_WIRE_32;
+wire	SYNTHESIZED_WIRE_66;
+wire	[7:0] SYNTHESIZED_WIRE_39;
+wire	[8:0] SYNTHESIZED_WIRE_67;
+wire	SYNTHESIZED_WIRE_42;
+wire	SYNTHESIZED_WIRE_43;
+wire	[7:0] SYNTHESIZED_WIRE_46;
+wire	SYNTHESIZED_WIRE_48;
+wire	[3:0] SYNTHESIZED_WIRE_51;
+wire	SYNTHESIZED_WIRE_52;
+
+assign	taken = SYNTHESIZED_WIRE_43;
+assign	halt = SYNTHESIZED_WIRE_55;
+assign	alu_NZCV = SYNTHESIZED_WIRE_51;
+assign	alu_reg1 = SYNTHESIZED_WIRE_15;
+assign	alu_reg2 = SYNTHESIZED_WIRE_16;
+assign	alu_result = SYNTHESIZED_WIRE_59;
+assign	instr_out = SYNTHESIZED_WIRE_67;
+assign	pc = SYNTHESIZED_WIRE_65;
+
+
+
+
+program_counter	b2v_inst(
+	.clock(clk),
+	.wenable_i(SYNTHESIZED_WIRE_0),
+	.reset_i(SYNTHESIZED_WIRE_55),
+	.newpc_i(SYNTHESIZED_WIRE_2),
+	.pc_o(SYNTHESIZED_WIRE_65));
+
+
+single_port_ram_with_init	b2v_inst1(
+	.writemem(SYNTHESIZED_WIRE_3),
+	.readmem(SYNTHESIZED_WIRE_4),
+	.clk(clk),
+	.addr(SYNTHESIZED_WIRE_56),
+	.data(SYNTHESIZED_WIRE_57),
+	.q(SYNTHESIZED_WIRE_58));
+	defparam	b2v_inst1.ADDR_WIDTH = 8;
+
+
+mux4	b2v_inst10(
+	.input1(SYNTHESIZED_WIRE_56),
+	.input2(SYNTHESIZED_WIRE_58),
+	.input3(SYNTHESIZED_WIRE_59),
+	.input4(SYNTHESIZED_WIRE_10),
+	.select(SYNTHESIZED_WIRE_11),
+	.out(SYNTHESIZED_WIRE_24));
+
+
+alu	b2v_inst12(
+	.special_op(SYNTHESIZED_WIRE_60),
+	.ALUon(SYNTHESIZED_WIRE_13),
+	.aro(SYNTHESIZED_WIRE_61),
+	.reg1(SYNTHESIZED_WIRE_15),
+	.reg2(SYNTHESIZED_WIRE_16),
+	.reg3(SYNTHESIZED_WIRE_17),
+	.reg4(SYNTHESIZED_WIRE_18),
+	.special_func(SYNTHESIZED_WIRE_62),
+	.NZCV(SYNTHESIZED_WIRE_51),
+	.result(SYNTHESIZED_WIRE_59));
+
+
+register_file	b2v_inst13(
+	.CLK(clk),
+	.write_reg(SYNTHESIZED_WIRE_20),
+	.read_reg(SYNTHESIZED_WIRE_21),
+	.special_op(SYNTHESIZED_WIRE_60),
+	.full_addr(SYNTHESIZED_WIRE_23),
+	.data_in(SYNTHESIZED_WIRE_24),
+	.full_reg_src(SYNTHESIZED_WIRE_63),
+	.reg_src1(SYNTHESIZED_WIRE_26),
+	.reg_src2(SYNTHESIZED_WIRE_64),
+	.special_func(SYNTHESIZED_WIRE_62),
+	.write_reg_full(SYNTHESIZED_WIRE_63),
+	.write_reg_src(SYNTHESIZED_WIRE_64),
+	.ldst(SYNTHESIZED_WIRE_48),
+	.aro(SYNTHESIZED_WIRE_61),
+	.data1(SYNTHESIZED_WIRE_56),
+	.data2(SYNTHESIZED_WIRE_57),
+	.data3(SYNTHESIZED_WIRE_17),
+	.data4(SYNTHESIZED_WIRE_18));
+
+
+prog3_ROM	b2v_inst2(
+	.clk(clk),
+	.pc(SYNTHESIZED_WIRE_65),
+	.instr_out(SYNTHESIZED_WIRE_67));
+
+
+mux_weird	b2v_inst22(
+	.select_hi(SYNTHESIZED_WIRE_32),
+	.select_lo(SYNTHESIZED_WIRE_66),
+	.input0(SYNTHESIZED_WIRE_56),
+	.input1(SYNTHESIZED_WIRE_65),
+	.input2(SYNTHESIZED_WIRE_58),
+	
+	.out(SYNTHESIZED_WIRE_15));
+
+
+muxq	b2v_inst23(
+	.select(SYNTHESIZED_WIRE_66),
+	.input1(SYNTHESIZED_WIRE_57),
+	.input2(SYNTHESIZED_WIRE_39),
+	.out(SYNTHESIZED_WIRE_16));
+
+
+decoder	b2v_inst24(
+	.clk(clk),
+	.instruction(SYNTHESIZED_WIRE_67),
+	.branch_imm(SYNTHESIZED_WIRE_39),
+	.immediate(SYNTHESIZED_WIRE_10),
+	.reg1_banked(SYNTHESIZED_WIRE_26),
+	.reg2_banked(SYNTHESIZED_WIRE_64),
+	.reg_full(SYNTHESIZED_WIRE_63));
+
+assign	SYNTHESIZED_WIRE_42 =  ~SYNTHESIZED_WIRE_55;
+
+
+next_pc_logic	b2v_inst4(
+	.clk(clk),
+	.start(SYNTHESIZED_WIRE_42),
+	.taken(SYNTHESIZED_WIRE_43),
+	.branch(SYNTHESIZED_WIRE_66),
+	.currentpc(SYNTHESIZED_WIRE_65),
+	.target(SYNTHESIZED_WIRE_46),
+	.pc_o(SYNTHESIZED_WIRE_2));
+
+assign	SYNTHESIZED_WIRE_0 =  ~SYNTHESIZED_WIRE_55;
+
+
+control	b2v_inst7(
+	.ldst(SYNTHESIZED_WIRE_48),
+	.aro(SYNTHESIZED_WIRE_61),
+	.instruction(SYNTHESIZED_WIRE_67),
+	.NZCV(SYNTHESIZED_WIRE_51),
+	.ALUon(SYNTHESIZED_WIRE_13),
+	.fulladdr(SYNTHESIZED_WIRE_23),
+	.special_op(SYNTHESIZED_WIRE_60),
+	.write_reg(SYNTHESIZED_WIRE_20),
+	.read_reg(SYNTHESIZED_WIRE_21),
+	.write_mem(SYNTHESIZED_WIRE_3),
+	.read_mem(SYNTHESIZED_WIRE_4),
+	.branch(SYNTHESIZED_WIRE_66),
+	.direct_flag(SYNTHESIZED_WIRE_52),
+	.mem_alu_src(SYNTHESIZED_WIRE_32),
+	.halt(SYNTHESIZED_WIRE_55),
+	.takeit(SYNTHESIZED_WIRE_43),
+	.reg_input_src(SYNTHESIZED_WIRE_11),
+	.special_func(SYNTHESIZED_WIRE_62));
+
+
+muxq	b2v_inst8(
+	.select(SYNTHESIZED_WIRE_52),
+	.input1(SYNTHESIZED_WIRE_59),
+	.input2(SYNTHESIZED_WIRE_56),
+	.out(SYNTHESIZED_WIRE_46));
+
+
+endmodule

@@ -1,0 +1,45 @@
+module testbench_reg();
+reg clk;
+reg [7:0] data_out;
+reg [1:0] bank;
+reg [2:0] r1_addr;
+reg [2:0] r2_addr;
+reg write;
+reg read;
+reg spec_op;
+reg [2:0] spec_fun;
+reg full_addr;
+reg [3:0] full_reg_src;
+wire [7:0] d1;
+wire [7:0] d2;
+wire [7:0] d3;
+wire [7:0] d4;
+wire [1:0] aro;
+wire ldst;
+
+initial begin
+clk=1;
+
+end
+
+always begin
+#5 clk = ~clk; // Toggle clock every 5 ticks
+// this makes the clock cycle 10 ticks
+end
+
+register_file reg_inst(.CLK(clk),
+.write_reg(write),
+.read_reg(read),
+.reg_src1(r1_addr),
+.reg_src2(r2_addr),
+.data_in(data_out),
+.special_op(spec_op),
+.special_func(spec_fun),
+.full_addr(full_addr),
+.full_reg_src(full_reg_src),
+.data1(d1),
+.data2(d2),
+.data3(d3),
+.data4(d4),
+.aro(aro),
+.ldst(ldst));

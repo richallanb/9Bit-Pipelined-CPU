@@ -1,0 +1,32 @@
+module alu(
+input wire aro [2:0],
+input wire reg1 [7:0],
+input wire reg2 [7:0],
+input wire ALUon,
+
+output reg result [7:0],
+output reg NZCO [3:0],
+)
+reg temp [7:0];
+always @ (posedge ALUon)
+begin
+	case(aro[2:0])
+		2'00: begin
+					result <= reg1 + reg2;
+				end
+		2'01: begin
+					result <= reg1 - reg2;
+				end
+		2'10: begin
+					temp <=  reg1 - reg2;
+					if (temp == 8'00000000)
+						NZCO[3] = 1'1;
+				end
+		2'11: begin
+					temp <= reg1-reg2;
+					result[0] = temp[7];
+				end
+	endcase
+
+end
+endmodule

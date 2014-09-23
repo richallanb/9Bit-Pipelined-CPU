@@ -1,0 +1,20 @@
+module fetch_unit(
+input clk,
+input start,
+input [7:0]currentpc,
+input [7:0]target,
+input taken,
+input branch,
+output [7:0]pc_o
+);
+
+ 
+always @ (posedge clk)
+begin
+	if(branch)
+	  pc_o <= target;
+	else
+		pc_o <= currentpc + 1;
+end
+
+endmodule

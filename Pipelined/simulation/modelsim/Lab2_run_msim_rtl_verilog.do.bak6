@@ -1,0 +1,19 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/alu.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/program_counter.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/register_file.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/next_pc_logic.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/control.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/datamem.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/muxq.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/mux4.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/decoder.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/mux_weird.sv}
+vlog -sv -work work +incdir+E:/CSE\ 141/Lab2 {E:/CSE 141/Lab2/prog3_ROM.sv}
+

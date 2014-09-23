@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'program_counter:b2v_inst|pc[0]'
+Slack : -17.296
+TNS   : -8400.631
+
+Type  : Slow Model Setup 'clk'
+Slack : -11.784
+TNS   : -15990.503
+
+Type  : Slow Model Hold 'program_counter:b2v_inst|pc[0]'
+Slack : -18.578
+TNS   : -1831.395
+
+Type  : Slow Model Hold 'clk'
+Slack : -0.179
+TNS   : -0.179
+
+Type  : Slow Model Minimum Pulse Width 'program_counter:b2v_inst|pc[0]'
+Slack : -10.124
+TNS   : -25597.746
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -2243.380
+
+Type  : Fast Model Setup 'program_counter:b2v_inst|pc[0]'
+Slack : -7.394
+TNS   : -3503.147
+
+Type  : Fast Model Setup 'clk'
+Slack : -4.587
+TNS   : -6405.898
+
+Type  : Fast Model Hold 'program_counter:b2v_inst|pc[0]'
+Slack : -8.614
+TNS   : -922.641
+
+Type  : Fast Model Hold 'clk'
+Slack : -0.351
+TNS   : -1.034
+
+Type  : Fast Model Minimum Pulse Width 'program_counter:b2v_inst|pc[0]'
+Slack : -4.171
+TNS   : -9010.494
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -2243.380
+
+------------------------------------------------------------

@@ -1,0 +1,423 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\rbull\Desktop\Lab2
+valu
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 I[fzKnK584CCJCLW7181PV1
+Z3 Vo`B@>W4>^T@E6?OJc6^HJ2
+Z4 !s105 alu_sv_unit
+S1
+Z5 dC:\Users\Richard\Documents\Books\Fall 2013\cs141l\Lab2
+Z6 w1384758683
+Z7 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/alu.sv
+Z8 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/alu.sv
+L0 1
+Z9 OV;L;10.1d;51
+r1
+31
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/alu.sv|
+Z11 o-work work -O0
+Z12 !s100 N5nzblXRF]fQPU]bNB0<E0
+Z13 !s108 1384761259.585000
+Z14 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/alu.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol
+R1
+Z15 !s100 e4Kh1EZ>Ra_9l2g;2UB:43
+Z16 Ii0OSz00BoKNaA[k:aZLMm2
+Z17 VHLA==n40U3LFD25eH]BAh3
+Z18 !s105 control_sv_unit
+S1
+R5
+Z19 w1384727510
+Z20 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/control.sv
+Z21 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/control.sv
+L0 1
+R9
+r1
+31
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/control.sv|
+R11
+Z23 !s108 1384761260.354000
+Z24 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/control.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecoder
+R1
+Z25 !s100 zWH14lXYfjD;Gd^5nh<Mm3
+Z26 II=@kd_o5bB<_h4je[o1mE3
+Z27 VM:jX[S6m9>fl1mM;h07c60
+Z28 !s105 decoder_sv_unit
+S1
+R5
+Z29 w1384727520
+Z30 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/decoder.sv
+Z31 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/decoder.sv
+L0 1
+R9
+r1
+31
+Z32 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/decoder.sv|
+R11
+Z33 !s108 1384761260.188000
+Z34 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/decoder.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vinstruction_rom
+R1
+Z35 !s100 ^GbK<0LnzRF^F1@LifmQc0
+Z36 INP7?A1]BG`3zzXJb<3dVn0
+Z37 VV61PZ42F8KIW<4d]Ye>`I1
+Z38 !s105 instruction_rom_sv_unit
+S1
+R5
+Z39 w1383301777
+Z40 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/instruction_rom.sv
+Z41 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/instruction_rom.sv
+L0 1
+R9
+r1
+31
+Z42 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/instruction_rom.sv|
+R11
+!i10b 1
+!s85 0
+Z43 !s108 1384761262.337000
+Z44 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/instruction_rom.sv|
+!s101 -O0
+vmux4
+R1
+Z45 !s100 b1N472YZIRHHelzfd9dBJ1
+Z46 IjoW2RkzV4<ChfVeK3j1KG0
+Z47 VVVQiV3CA6UEZ3o4P>6UJ`0
+Z48 !s105 mux4_sv_unit
+S1
+R5
+Z49 w1384506062
+Z50 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux4.sv
+Z51 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux4.sv
+L0 1
+R9
+r1
+31
+Z52 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux4.sv|
+R11
+Z53 !s108 1384761261.433000
+Z54 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux4.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux_weird
+R1
+Z55 !s100 IAiPgA2J7=k4[>=iQ8ggR0
+Z56 ICJg?fXF1zlPI>=XJ=35;b0
+Z57 V^`:V8O[=1MlV[T0h7IA`b3
+Z58 !s105 mux_weird_sv_unit
+S1
+R5
+Z59 w1384475741
+Z60 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux_weird.sv
+Z61 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux_weird.sv
+L0 1
+R9
+r1
+31
+Z62 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux_weird.sv|
+R11
+Z63 !s108 1384761261.654000
+Z64 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/mux_weird.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmuxq
+R1
+Z65 !s100 VK03WGVDZW^2]CU;h2e1P2
+Z66 Ifnnef;VBjCZ>C[cJ0d1Q30
+Z67 VL^c7OFkloamVDL1YVB7^X1
+Z68 !s105 muxq_sv_unit
+S1
+R5
+Z69 w1384381313
+Z70 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/muxq.sv
+Z71 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/muxq.sv
+L0 1
+R9
+r1
+31
+Z72 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/muxq.sv|
+R11
+Z73 !s108 1384761261.806000
+Z74 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/muxq.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vnext_pc_logic
+R1
+Z75 !s100 eRC[>l?z[X830P@b<WPk50
+Z76 IK?Z24JN_ggg]T;EY;]0LS2
+Z77 VEW]05@8C4czHn]I[^3:mD3
+Z78 !s105 next_pc_logic_sv_unit
+S1
+R5
+Z79 w1384646391
+Z80 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/next_pc_logic.sv
+Z81 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/next_pc_logic.sv
+L0 1
+R9
+r1
+31
+Z82 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/next_pc_logic.sv|
+R11
+Z83 !s108 1384761261.312000
+Z84 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/next_pc_logic.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vpc_schematic
+Z85 Im4524[4ER1mBjIeY=BLA_1
+Z86 Vh4mBhfPP^b>b0b<WzJGYL3
+R5
+Z87 w1384758960
+Z88 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/pc_schematic.v
+Z89 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/pc_schematic.v
+L0 19
+R9
+r1
+31
+Z90 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/pc_schematic.v|
+R11
+Z91 !s100 i4fz0aZL3]27hjFP]z6i<3
+Z92 !s108 1384761259.414000
+Z93 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/pc_schematic.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprog1_ROM
+R1
+Z94 !s100 W>LS;6MBEZmY=4m>:UM:H1
+Z95 Ioj9iFLCzBEgJd=dDPSkCP0
+Z96 VjjM?G@F6>1]glj07Zn`@_0
+Z97 !s105 prog1_ROM_sv_unit
+S1
+R5
+Z98 w1384753163
+Z99 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog1_ROM.sv
+Z100 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog1_ROM.sv
+L0 1
+R9
+r1
+31
+Z101 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog1_ROM.sv|
+R11
+Z102 nprog1_@r@o@m
+Z103 !s108 1384761259.919000
+Z104 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog1_ROM.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vprog2_ROM
+R1
+Z105 !s100 PA3G3^TIK3NgRIMVl9@Dj0
+Z106 I@<jFd0QcZkKkBf89=4[j@2
+Z107 VXz6A<2E3=]Q_[RbKR@^QK3
+Z108 !s105 prog2_ROM_sv_unit
+S1
+R5
+Z109 w1384687784
+Z110 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog2_ROM.sv
+Z111 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog2_ROM.sv
+L0 1
+R9
+r1
+31
+Z112 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog2_ROM.sv|
+R11
+Z113 nprog2_@r@o@m
+Z114 !s108 1384761260.638000
+Z115 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog2_ROM.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vprog3_ROM
+R1
+Z116 IJ_O50]T2BJ<=o=7?4^KRB2
+Z117 V_43Sg`?_g5Ik2So;YdYI<3
+Z118 !s105 prog3_ROM_sv_unit
+S1
+R5
+Z119 w1384758639
+Z120 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog3_ROM.sv
+Z121 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog3_ROM.sv
+L0 1
+R9
+r1
+31
+Z122 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog3_ROM.sv|
+R11
+Z123 nprog3_@r@o@m
+Z124 !s100 402@cELPNTTl=1ahNcFhK0
+Z125 !s108 1384761259.719000
+Z126 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/prog3_ROM.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vprogram_counter
+R1
+Z127 !s100 @L]W734SXPg_R`3e?Oi3i2
+Z128 I3Yk7k9O9oi8QzMmh;FM]f1
+Z129 VdKATi^==B=LIQFKR:1d@62
+Z130 !s105 program_counter_sv_unit
+S1
+R5
+Z131 w1384672488
+Z132 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/program_counter.sv
+Z133 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/program_counter.sv
+L0 1
+R9
+r1
+31
+Z134 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/program_counter.sv|
+R11
+Z135 !s108 1384761261.162000
+Z136 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/program_counter.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_file
+R1
+Z137 !s100 mK^eJT1ASi024Dg:82=^;0
+Z138 IY0FeffXBTYfLzkT?kgWGE0
+Z139 V;eR3@zga7b3jI@am>::;>3
+Z140 !s105 register_file_sv_unit
+S1
+R5
+Z141 w1384749740
+Z142 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/register_file.sv
+Z143 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/register_file.sv
+L0 1
+R9
+r1
+31
+Z144 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/register_file.sv|
+R11
+Z145 !s108 1384761260.022000
+Z146 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/register_file.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vsingle_port_ram_with_init
+R1
+Z147 !s100 l:l1NR`dkH<3Jd2=]=2aE3
+Z148 IzJ9kZ]O<^5En4ZHdWATbi1
+Z149 VzXJjG4NlWHhe4fg]1C1Ng0
+Z150 !s105 datamem_sv_unit
+S1
+R5
+Z151 w1384753261
+Z152 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/datamem.sv
+Z153 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/datamem.sv
+L0 5
+R9
+r1
+31
+Z154 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/datamem.sv|
+R11
+Z155 !s108 1384761259.810000
+Z156 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/datamem.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+R1
+Z157 !s100 Ug=?zWUV2=j>MebCPODJ80
+Z158 IBH1IWgmjk^eVJefSb04>c3
+Z159 VhGfW:390DM[oDMzegDH9`2
+Z160 !s105 testbench_sv_unit
+S1
+R5
+Z161 w1383302215
+Z162 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench.sv
+Z163 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench.sv
+L0 1
+R9
+r1
+31
+Z164 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench.sv|
+R11
+Z165 !s108 1384761262.147000
+Z166 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench_alu
+R1
+!i10b 1
+Z167 !s100 R4ADZ>ZWTUVjO_8SLPP]G3
+Z168 IDLdJ2jYik`RAWIhlYmcIB3
+Z169 V=N:^=aRoaP>KQbUF>?>RB2
+Z170 !s105 testbench_alu_sv_unit
+S1
+R5
+Z171 w1383298162
+Z172 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_alu.sv
+Z173 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_alu.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1384761262.514000
+!s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_alu.sv|
+Z174 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_alu.sv|
+!s101 -O0
+R11
+vtestbench_prog
+R1
+Z175 !s100 WJeDa>L1RA^?_gOL_OeTa2
+Z176 IUDL;]4f>;MMWQCiH`GWVY1
+Z177 V?:kB^B`j:VfRYIbl8kGXd2
+Z178 !s105 testbench_prog_sv_unit
+S1
+R5
+Z179 w1384672636
+Z180 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_prog.sv
+Z181 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_prog.sv
+L0 1
+R9
+r1
+31
+Z182 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_prog.sv|
+R11
+Z183 !s108 1384761260.945000
+Z184 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_prog.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench_reg
+R1
+Z185 !s100 >4C=[a?1BETjVZA9_HEB:0
+Z186 IiK1]PXjLILIE0Ea?5_7QG1
+Z187 VkToDB4UKDRdTKeLn3L:>L2
+Z188 !s105 testbench_reg_sv_unit
+S1
+R5
+Z189 w1383322033
+Z190 8C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_reg.sv
+Z191 FC:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_reg.sv
+L0 1
+R9
+r1
+31
+Z192 !s90 -reportprogress|300|-work|work|C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_reg.sv|
+R11
+Z193 !s108 1384761261.946000
+Z194 !s107 C:/Users/Richard/Documents/Books/Fall 2013/cs141l/Lab2/testbench_reg.sv|
+!i10b 1
+!s85 0
+!s101 -O0

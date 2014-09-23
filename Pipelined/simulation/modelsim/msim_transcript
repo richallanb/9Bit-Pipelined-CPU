@@ -1,0 +1,562 @@
+# Reading C:/Altera/modelsim_ae/tcl/vsim/pref.tcl 
+# do Lab2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\Altera\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\Altera\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module pc_schematic_v
+# 
+# Top level modules:
+# 	pc_schematic_v
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/program_counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/register_file.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/next_pc_logic.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module next_pc_logic
+# 
+# Top level modules:
+# 	next_pc_logic
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/control.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/datamem.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module single_port_ram_with_init
+# 
+# Top level modules:
+# 	single_port_ram_with_init
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/muxq.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module muxq
+# 
+# Top level modules:
+# 	muxq
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/mux_weird.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module mux_weird
+# 
+# Top level modules:
+# 	mux_weird
+# vlog -sv -work work +incdir+C:/Users/rbull/Desktop/Lab2 {C:/Users/rbull/Desktop/Lab2/prog3_ROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module prog3_ROM
+# 
+# Top level modules:
+# 	prog3_ROM
+# 
+#  
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/alu.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/control.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/datamem.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module single_port_ram_with_init
+# 
+# Top level modules:
+# 	single_port_ram_with_init
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/decoder.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/instruction_rom.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module instruction_rom
+# 
+# Top level modules:
+# 	instruction_rom
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/mux_weird.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module mux_weird
+# 
+# Top level modules:
+# 	mux_weird
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/mux4.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/muxq.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module muxq
+# 
+# Top level modules:
+# 	muxq
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/next_pc_logic.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module next_pc_logic
+# 
+# Top level modules:
+# 	next_pc_logic
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module pc_schematic_v
+# 
+# Top level modules:
+# 	pc_schematic_v
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/prog3_ROM.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module prog3_ROM
+# 
+# Top level modules:
+# 	prog3_ROM
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/program_counter.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/register_file.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_alu.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_alu
+# 
+# Top level modules:
+# 	testbench_alu
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_prog
+# 
+# Top level modules:
+# 	testbench_prog
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_reg.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_reg
+# 
+# Top level modules:
+# 	testbench_reg
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# //  ModelSim ALTERA 10.0d Jan 18 2012 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(30): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /testbench_prog/pc_schem_inst
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(30): [TFMPC] - Missing connection for port 'halt'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+run
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_prog
+# 
+# Top level modules:
+# 	testbench_prog
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(30): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /testbench_prog/pc_schem_inst
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(30): [TFMPC] - Missing connection for port 'halt'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+run
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_prog
+# 
+# Top level modules:
+# 	testbench_prog
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(33): [TFMPC] - Too few port connections. Expected 9, found 8.
+#         Region: /testbench_prog/pc_schem_inst
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/testbench_prog.sv(33): [TFMPC] - Missing connection for port 'halt'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+run
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module testbench_prog
+# 
+# Top level modules:
+# 	testbench_prog
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/control.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+vlog -reportprogress 300 -work work C:/Users/rbull/Desktop/Lab2/program_counter.sv
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+vsim work.testbench_alu
+# vsim work.testbench_alu 
+# Loading sv_std.std
+# Loading work.testbench_alu
+# Loading work.alu
+# ** Error: (vsim-3063) C:/Users/rbull/Desktop/Lab2/testbench_alu.sv(68): Port 'clk' not found in the connected module (9th connection).
+#         Region: /testbench_alu/alu_inst
+# Error loading design
+vsim work.testbench_prog
+# vsim work.testbench_prog 
+# Loading sv_std.std
+# Loading work.testbench_prog
+# Loading work.pc_schematic_v
+# Loading work.program_counter
+# Loading work.single_port_ram_with_init
+# Loading work.mux4
+# Loading work.alu
+# Loading work.register_file
+# Loading work.prog3_ROM
+# Loading work.mux_weird
+# Loading work.muxq
+# Loading work.decoder
+# Loading work.next_pc_logic
+# Loading work.control
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Too few port connections. Expected 11, found 10.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst12
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(129): [TFMPC] - Missing connection for port 'tally_count'.
+# ** Warning: (vsim-3017) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench_prog/pc_schem_inst/b2v_inst22
+# ** Warning: (vsim-3722) C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv(166): [TFMPC] - Missing connection for port 'input3'.
+add wave -position end  sim:/testbench_prog/clk_i
+add wave -position end  sim:/testbench_prog/taken
+add wave -position end  sim:/testbench_prog/alu_NZCV
+add wave -position end  sim:/testbench_prog/alu_reg1
+add wave -position end  sim:/testbench_prog/alu_reg2
+add wave -position end  sim:/testbench_prog/alu_result
+add wave -position end  sim:/testbench_prog/instr_out
+add wave -position end  sim:/testbench_prog/pc
+add wave -position end  sim:/testbench_prog/halt
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 85 ps.

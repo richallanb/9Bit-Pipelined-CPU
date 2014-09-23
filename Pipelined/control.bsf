@@ -1,0 +1,169 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 248 320)
+	(text "control" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "instruction[8..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "instruction[8..0]" (rect 21 27 80 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "aro[1..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "aro[1..0]" (rect 21 43 52 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ldst" (rect 0 0 12 12)(font "Arial" ))
+		(text "ldst" (rect 21 59 33 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "NZCV[3..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "NZCV[3..0]" (rect 21 75 70 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 91 31 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "ALUon" (rect 0 0 30 12)(font "Arial" ))
+		(text "ALUon" (rect 181 27 211 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 1))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "fulladdr" (rect 0 0 28 12)(font "Arial" ))
+		(text "fulladdr" (rect 183 43 211 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 1))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "special_op" (rect 0 0 41 12)(font "Arial" ))
+		(text "special_op" (rect 170 59 211 71)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64)(line_width 1))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "special_func[2..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "special_func[2..0]" (rect 142 75 211 87)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80)(line_width 3))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "write_reg" (rect 0 0 36 12)(font "Arial" ))
+		(text "write_reg" (rect 175 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 1))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "read_reg" (rect 0 0 36 12)(font "Arial" ))
+		(text "read_reg" (rect 175 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "write_mem" (rect 0 0 44 12)(font "Arial" ))
+		(text "write_mem" (rect 167 123 211 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128)(line_width 1))
+	)
+	(port
+		(pt 232 144)
+		(output)
+		(text "read_mem" (rect 0 0 44 12)(font "Arial" ))
+		(text "read_mem" (rect 167 139 211 151)(font "Arial" ))
+		(line (pt 232 144)(pt 216 144)(line_width 1))
+	)
+	(port
+		(pt 232 160)
+		(output)
+		(text "branch" (rect 0 0 27 12)(font "Arial" ))
+		(text "branch" (rect 184 155 211 167)(font "Arial" ))
+		(line (pt 232 160)(pt 216 160)(line_width 1))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "direct_flag" (rect 0 0 41 12)(font "Arial" ))
+		(text "direct_flag" (rect 170 171 211 183)(font "Arial" ))
+		(line (pt 232 176)(pt 216 176)(line_width 1))
+	)
+	(port
+		(pt 232 192)
+		(output)
+		(text "reg_input_src[1..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "reg_input_src[1..0]" (rect 137 187 211 199)(font "Arial" ))
+		(line (pt 232 192)(pt 216 192)(line_width 3))
+	)
+	(port
+		(pt 232 208)
+		(output)
+		(text "mem_alu_src" (rect 0 0 56 12)(font "Arial" ))
+		(text "mem_alu_src" (rect 155 203 211 215)(font "Arial" ))
+		(line (pt 232 208)(pt 216 208)(line_width 1))
+	)
+	(port
+		(pt 232 224)
+		(output)
+		(text "halt" (rect 0 0 12 12)(font "Arial" ))
+		(text "halt" (rect 199 219 211 231)(font "Arial" ))
+		(line (pt 232 224)(pt 216 224)(line_width 1))
+	)
+	(port
+		(pt 232 240)
+		(output)
+		(text "takeit" (rect 0 0 20 12)(font "Arial" ))
+		(text "takeit" (rect 191 235 211 247)(font "Arial" ))
+		(line (pt 232 240)(pt 216 240)(line_width 1))
+	)
+	(port
+		(pt 232 256)
+		(output)
+		(text "pipe_state_o[2..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pipe_state_o[2..0]" (rect 141 251 211 263)(font "Arial" ))
+		(line (pt 232 256)(pt 216 256)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 288)(line_width 1))
+	)
+)

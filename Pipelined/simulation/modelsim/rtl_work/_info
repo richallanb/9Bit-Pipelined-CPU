@@ -1,0 +1,363 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\rbull\Desktop\Lab2\simulation\modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 :CP]PHbGOHGT_H:3KF`8L2
+IMcf`LaGM20iF?087WFIV21
+V8]4U9I43BQNIFeZF<BFSF3
+S1
+Z2 dC:\Users\rbull\Desktop\Lab2\simulation\modelsim
+w1384496053
+8C:/Users/rbull/Desktop/Lab2/alu.sv
+FC:/Users/rbull/Desktop/Lab2/alu.sv
+L0 1
+Z3 OV;L;10.0d;49
+r1
+31
+Z4 o-work work -O0
+!s100 cJAAeIjh@>FjCIX>Y^@jY0
+!s105 alu_sv_unit
+!s85 0
+!s108 1384502786.157000
+!s107 C:/Users/rbull/Desktop/Lab2/alu.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/alu.sv|
+!s101 -O0
+vcontrol
+R1
+I3L4I@ZGEX2hCZA2IQI_Rb1
+VHLA==n40U3LFD25eH]BAh3
+S1
+R2
+w1384503251
+8C:/Users/rbull/Desktop/Lab2/control.sv
+FC:/Users/rbull/Desktop/Lab2/control.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 XIMZRmHVfCC`bRl4fMMKP2
+!s105 control_sv_unit
+!s85 0
+!s108 1384503259.185000
+!s107 C:/Users/rbull/Desktop/Lab2/control.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/control.sv|
+!s101 -O0
+vdecoder
+R1
+I47[e>eUKVNH9ShPQgS0>;2
+VVAO08mB;gWHfAWb]dfK>61
+S1
+R2
+w1384494803
+8C:/Users/rbull/Desktop/Lab2/decoder.sv
+FC:/Users/rbull/Desktop/Lab2/decoder.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 nC@TZzCD[jjId9b147QH80
+!s105 decoder_sv_unit
+!s85 0
+!s108 1384502786.797000
+!s107 C:/Users/rbull/Desktop/Lab2/decoder.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/decoder.sv|
+!s101 -O0
+vinstruction_rom
+R1
+I8Zb9ok8ko>gEI`KIWj0C:0
+VV61PZ42F8KIW<4d]Ye>`I1
+S1
+R2
+w1383301777
+8C:/Users/rbull/Desktop/Lab2/instruction_rom.sv
+FC:/Users/rbull/Desktop/Lab2/instruction_rom.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 NHPXf=d<TVQQCo5g0?[hj0
+!s105 instruction_rom_sv_unit
+!s85 0
+!s108 1384502787.000000
+!s107 C:/Users/rbull/Desktop/Lab2/instruction_rom.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/instruction_rom.sv|
+!s101 -O0
+vmux4
+R1
+IYb;6BfUUiH=MdkJH@]:B51
+VVVQiV3CA6UEZ3o4P>6UJ`0
+S1
+R2
+w1384468302
+8C:/Users/rbull/Desktop/Lab2/mux4.sv
+FC:/Users/rbull/Desktop/Lab2/mux4.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 G4k<^?CKX6m:MKZMlOL<b2
+!s105 mux4_sv_unit
+!s85 0
+!s108 1384502787.374000
+!s107 C:/Users/rbull/Desktop/Lab2/mux4.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/mux4.sv|
+!s101 -O0
+vmux_weird
+R1
+I>NHmY1i3^77^MlATlIj_D1
+V^`:V8O[=1MlV[T0h7IA`b3
+S1
+R2
+w1384475741
+8C:/Users/rbull/Desktop/Lab2/mux_weird.sv
+FC:/Users/rbull/Desktop/Lab2/mux_weird.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 _m111[F:S]=YJEkJb6RU43
+!s105 mux_weird_sv_unit
+!s85 0
+!s108 1384502787.187000
+!s107 C:/Users/rbull/Desktop/Lab2/mux_weird.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/mux_weird.sv|
+!s101 -O0
+vmuxq
+R1
+IR1?J6;dKOO?M62bn7`F042
+VL^c7OFkloamVDL1YVB7^X1
+S1
+R2
+w1384381313
+8C:/Users/rbull/Desktop/Lab2/muxq.sv
+FC:/Users/rbull/Desktop/Lab2/muxq.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 TA0zVF@9EGlRd;f23VEKX3
+!s105 muxq_sv_unit
+!s85 0
+!s108 1384502787.577000
+!s107 C:/Users/rbull/Desktop/Lab2/muxq.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/muxq.sv|
+!s101 -O0
+vnext_pc_logic
+R1
+I3dh9jUlLYX?lOk1CZWz0m3
+VEW]05@8C4czHn]I[^3:mD3
+S1
+R2
+w1383941917
+8C:/Users/rbull/Desktop/Lab2/next_pc_logic.sv
+FC:/Users/rbull/Desktop/Lab2/next_pc_logic.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 jUP[OKNHGPOYS7Mk8zTHh1
+!s105 next_pc_logic_sv_unit
+!s85 0
+!s108 1384502787.842000
+!s107 C:/Users/rbull/Desktop/Lab2/next_pc_logic.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/next_pc_logic.sv|
+!s101 -O0
+vpc_schematic_v
+R1
+IiR?fSHki]e;B>JjZ6z7MY2
+VXbn9XnCo9@aJi0V0KcC=M0
+S1
+R2
+w1384501995
+8C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv
+FC:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv
+L0 19
+R3
+r1
+31
+R4
+!s100 2c:7NWI>Xnf1g>RL_81ZX2
+!s105 pc_schematic_v_sv_unit
+!s85 0
+!s108 1384502788.045000
+!s107 C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/pc_schematic_v.sv|
+!s101 -O0
+vprog3_ROM
+R1
+IZl4SHSF[<@OPUA5c8_4150
+V_43Sg`?_g5Ik2So;YdYI<3
+S1
+R2
+w1384495381
+8C:/Users/rbull/Desktop/Lab2/prog3_ROM.sv
+FC:/Users/rbull/Desktop/Lab2/prog3_ROM.sv
+L0 1
+R3
+r1
+31
+R4
+nprog3_@r@o@m
+!s100 TeUljRSBIS6gR>^lKeVXL2
+!s105 prog3_ROM_sv_unit
+!s85 0
+!s108 1384502788.248000
+!s107 C:/Users/rbull/Desktop/Lab2/prog3_ROM.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/prog3_ROM.sv|
+!s101 -O0
+vprogram_counter
+R1
+!s100 >>6[jXI[;Wm[>3C@ibgBW1
+I4`Aj^EY60P40:Eom2TB:c0
+V7]haH_3KT<<o5kcM3Z`T>1
+!s105 program_counter_sv_unit
+S1
+R2
+w1384503310
+8C:/Users/rbull/Desktop/Lab2/program_counter.sv
+FC:/Users/rbull/Desktop/Lab2/program_counter.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1384503317.360000
+!s107 C:/Users/rbull/Desktop/Lab2/program_counter.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/program_counter.sv|
+!s101 -O0
+R4
+vregister_file
+R1
+Iga^D2TSkDN0HUdO4KV=bg1
+V;eR3@zga7b3jI@am>::;>3
+S1
+R2
+w1384492337
+8C:/Users/rbull/Desktop/Lab2/register_file.sv
+FC:/Users/rbull/Desktop/Lab2/register_file.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 Lzz[aLZ6Y;NZdh4i<KW3S0
+!s105 register_file_sv_unit
+!s85 0
+!s108 1384502788.654000
+!s107 C:/Users/rbull/Desktop/Lab2/register_file.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/register_file.sv|
+!s101 -O0
+vsingle_port_ram_with_init
+R1
+I94X=T7VldB2Sl_oQF<Bd^1
+VzXJjG4NlWHhe4fg]1C1Ng0
+S1
+R2
+w1384377065
+8C:/Users/rbull/Desktop/Lab2/datamem.sv
+FC:/Users/rbull/Desktop/Lab2/datamem.sv
+L0 5
+R3
+r1
+31
+R4
+!s100 zUYI?U<2TIOabSP@<5`_23
+!s105 datamem_sv_unit
+!s85 0
+!s108 1384502786.579000
+!s107 C:/Users/rbull/Desktop/Lab2/datamem.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/datamem.sv|
+!s101 -O0
+vtestbench
+R1
+I?VizzLiQHnoPG@obDbH1<0
+VhGfW:390DM[oDMzegDH9`2
+S1
+R2
+w1383302215
+8C:/Users/rbull/Desktop/Lab2/testbench.sv
+FC:/Users/rbull/Desktop/Lab2/testbench.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 Z?AUN0Y7Ji?e1M_knYh3Z1
+!s105 testbench_sv_unit
+!s85 0
+!s108 1384502788.872000
+!s107 C:/Users/rbull/Desktop/Lab2/testbench.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/testbench.sv|
+!s101 -O0
+vtestbench_alu
+R1
+IZlemJJ<PN6SL4>5kPSceN0
+V=N:^=aRoaP>KQbUF>?>RB2
+S1
+R2
+w1383298162
+8C:/Users/rbull/Desktop/Lab2/testbench_alu.sv
+FC:/Users/rbull/Desktop/Lab2/testbench_alu.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 4Hjz<;@gE_VGF=52z_=[Y3
+!s105 testbench_alu_sv_unit
+!s85 0
+!s108 1384502789.059000
+!s107 C:/Users/rbull/Desktop/Lab2/testbench_alu.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/testbench_alu.sv|
+!s101 -O0
+vtestbench_prog
+R1
+IM<@j>c>KVMY@`g[z[QfOS2
+V?:kB^B`j:VfRYIbl8kGXd2
+S1
+R2
+w1384503070
+8C:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+FC:/Users/rbull/Desktop/Lab2/testbench_prog.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 Q3Yli6zgYZLHDC3GL3>4F1
+!s105 testbench_prog_sv_unit
+!s85 0
+!s108 1384503083.752000
+!s107 C:/Users/rbull/Desktop/Lab2/testbench_prog.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/testbench_prog.sv|
+!s101 -O0
+vtestbench_reg
+R1
+I[@TW;Vaacn7GPjegkXnM33
+VkToDB4UKDRdTKeLn3L:>L2
+S1
+R2
+w1383322033
+8C:/Users/rbull/Desktop/Lab2/testbench_reg.sv
+FC:/Users/rbull/Desktop/Lab2/testbench_reg.sv
+L0 1
+R3
+r1
+31
+R4
+!s100 =l80hgnbnbI5dVzG[:I_D0
+!s105 testbench_reg_sv_unit
+!s85 0
+!s108 1384502789.465000
+!s107 C:/Users/rbull/Desktop/Lab2/testbench_reg.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/Lab2/testbench_reg.sv|
+!s101 -O0

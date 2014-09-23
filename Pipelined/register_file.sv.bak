@@ -1,0 +1,25 @@
+module register_file(input write_reg, input read_reg, input reg M_set[1:0],
+							input reg reg_src1[2:0], input reg reg_src2[2:0], 
+							output reg data1[7:0], output reg data2[7:0])
+							/* BANK A */
+							reg bank_a_reg0[7:0]; 		// 0000
+							reg bank_a_imm[7:0];  		// 0001
+							reg bank_a_gen0[7:0]; 		// 0010
+							reg bank_a_gen1[7:0]; 		// 0011
+							reg bank_a_gen2[7:0]; 		// 0100
+							reg bank_a_gen3[7:0]; 		// 0101
+							reg bank_a_gen4[7:0]; 		// 0110
+							reg bank_a_gen5[7:0]; 		// 0111
+							/* BANK B */
+							reg bank_b_setting[7:0];	// 1000
+							reg bank_b_gen0[7:0];		// 1001
+							reg bank_b_gen1[7:0];		// 1010
+							reg bank_b_gen2[7:0];		// 1011
+							reg bank_b_gen3[7:0];		// 1100
+							reg bank_b_gen4[7:0];		// 1101
+							reg bank_b_gen5[7:0];		// 1110
+							reg bank_b_gen6[7:0];		// 1111
+
+							
+							
+endmodule
